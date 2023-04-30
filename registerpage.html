@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
 </head>
+
 <body>
     <h2>Register</h2>
     <div>
-        <input type="username" name="username" placeholder="username" required/>
-        <input type="email" name="email" placeholder="Email" required/>
-        <input type="password" name="password" placeholder="Password" required/>
-        <input type="password" name="confirmpassword" placeholder="confirm Password" required/>
-        <input type="button" value="LOGIN" onclick="onLogin()"> 
+        <input type="username" name="username" placeholder="username" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="confirmpassword" placeholder="confirm Password" required />
+        <input type="button" value="LOGIN" onclick="onLogin()">
     </div>
 </body>
 <script>
-    function onLogin(){
+    function onLogin() {
         let username = document.getElementsByName("username")[0].value
         let email = document.getElementsByName("email")[0].value
-        let password = document.getElementsByName("password")[0].value      
+        let password = document.getElementsByName("password")[0].value
         let confirmpassword = document.getElementsByName("confirmpassword")[0].value
 
+        if (password != confirmpassword) {
+            alert("Passwords did not match");
+        } else {
+            alert("Password is matched");
+        }
         console.log(username);
         console.log(email);
         console.log(password);
-        console.log(confirmpassword)
+        console.log(confirmpassword);
     }
-</script>    
+</script>
+
 </html>
