@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+    body{
+        background-color: #63616f;
+    }
+    
+        div{
+            height: 700px;
+            width: 400px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 20px;
+            border: 2px solid rgb(233, 247, 237);
+            padding: 100px 77px;
+        }
+
+        input{
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgb(51, 255, 255);
+            border-radius: 6px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        label{
+            display: block;
+            margin-top: 30px;
+            font-size: 25px;
+            font-weight: 600
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 style="text-align:center;font-size:35px">Registration</h2>
+        <label for="username">Username</label>
+        <input type="username" name="username" placeholder="Enter your Username" required />
+        <label for="Email">Email</label>
+        <input type="email" name="email" placeholder="Email" required />
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter your Password" required />
+        <label for="password">Confirm Password</label>
+        <input type="password" name="confirmpassword" placeholder="confirm Password" required />
+        <input type="button" value="LOGIN" onclick="onLogin()">
+    </div>
+</body>
+<script>
+    function onLogin() {
+        let username = document.getElementsByName("username")[0].value
+        let email = document.getElementsByName("email")[0].value
+        let password = document.getElementsByName("password")[0].value
+        let confirmpassword = document.getElementsByName("confirmpassword")[0].value
+
+        if (password != confirmpassword) {
+            alert("Passwords did not match");
+        } else {
+            window.location.href = "simple.html";
+        }
+        console.log(username);
+        console.log(email);
+        console.log(password);
+        console.log(confirmpassword);
+    }
+</script>
+
+</html>
